@@ -4,7 +4,8 @@ Official TypeScript/JavaScript client for the [Quotai](https://quotai.net) publi
 
 Pull translations into your app at runtime, resolve individual keys with fallbacks, and push newly extracted strings back to your Quotai project.
 
-**npm:** [quotai-sdk](https://www.npmjs.com/package/quotai-sdk)
+**npm:** [quotai-sdk](https://www.npmjs.com/package/quotai-sdk)  
+**GitHub Packages:** `@momostafas/quotai-sdk`
 
 ## Requirements
 
@@ -13,8 +14,33 @@ Pull translations into your app at runtime, resolve individual keys with fallbac
 
 ## Install
 
+### npm (public registry)
+
 ```bash
 npm install quotai-sdk
+```
+
+```ts
+import { QuotaiClient } from 'quotai-sdk';
+```
+
+### GitHub Packages
+
+Add to your project `.npmrc`:
+
+```
+@momostafas:registry=https://npm.pkg.github.com
+//npm.pkg.github.com/:_authToken=YOUR_GITHUB_TOKEN
+```
+
+Create a [GitHub personal access token](https://github.com/settings/tokens) with `read:packages` (and `repo` if the package is private).
+
+```bash
+npm install @momostafas/quotai-sdk
+```
+
+```ts
+import { QuotaiClient } from '@momostafas/quotai-sdk';
 ```
 
 ## Quick start
@@ -158,11 +184,14 @@ npm install
 npm run build
 ```
 
-Publish to npm:
+Publish to GitHub Packages:
 
 ```bash
-npm publish
+npm run build
+NODE_AUTH_TOKEN=$(gh auth token) npm publish
 ```
+
+Publish to the public npm registry (unscoped name `quotai-sdk` requires temporarily setting `"name": "quotai-sdk"` and removing `publishConfig`, or use `npm publish --registry https://registry.npmjs.org` with a matching package name).
 
 ## License
 

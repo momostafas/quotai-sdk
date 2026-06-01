@@ -1,5 +1,5 @@
 {
-  "name": "quotai-sdk",
+  "name": "@momostafas/quotai-sdk",
   "version": "0.1.1",
   "description": "Official TypeScript/JavaScript SDK for Quotai localization",
   "type": "module",
@@ -18,11 +18,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/momostafas/quotai-sdk.git"
+    "url": "git+https://github.com/momostafas/quotai-sdk.git"
   },
-  "homepage": "https://quotai.net",
+  "homepage": "https://github.com/momostafas/quotai-sdk#readme",
   "bugs": {
     "url": "https://github.com/momostafas/quotai-sdk/issues"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   },
   "scripts": {
     "build": "tsc",
