@@ -1,6 +1,6 @@
 {
   "name": "@momostafas/quotai-sdk",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Official TypeScript/JavaScript SDK for Quotai localization",
   "type": "module",
   "main": "./dist/index.js",
